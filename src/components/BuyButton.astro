@@ -6,7 +6,7 @@ const SPAIN = 'ES';
 const country = Astro.request.headers.get('X-Vercel-IP-Country') ?? SPAIN;
 
 const storeCountry = country === SPAIN ? 'spain' : 'usa';
-const countryName = country === SPAIN ? 'España' : 'Estados Unidos';
+const countryName = storeCountry === 'spain' ? 'España' : 'Estados Unidos';
 
 const { buy } = Astro.props;
 
